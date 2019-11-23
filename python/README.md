@@ -2,6 +2,8 @@
 
 A Docker image for CI with Python.
 
+[![Docker Hub](https://img.shields.io/docker/cloud/build/hattya/python)](https://hub.docker.com/r/hattya/python)
+
 
 ## Installation
 
