@@ -24,7 +24,7 @@ $ docker pull hattya/python
   - C++
   - LCOV
 - Bazaar
-- Git
 - Fossil
+- Git
 - Mercurial
 - Subversion
