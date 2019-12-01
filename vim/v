@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+BINDIR="/usr/local/bin"
+VIMDIR="/usr/local/vim"
+
+setup() {
+  for sym in ${BINDIR}/*; do
+    [ -L ${sym} ] && realpath ${sym} | grep "^${VIMDIR}" >/dev/null && rm ${sym} || true
+  done
+
+  printf "\e[32;1mVim\e[0m %s\n" $(echo ${1} | sed 's/\.00\+/\./')
+  for x in ${VIMDIR}/${1}/bin/*; do
+    ln -s ${x} ${BINDIR}/$(basename ${x})
+  done
+}
+
+case "${1}" in
+7.4|8.[01])
+  setup $(basename $(ls -d ${VIMDIR}/${1}.* | sort | head -n 1))
+  ;;
+latest)
+  setup $(basename $(ls -d ${VIMDIR}/*      | sort | tail -n 1))
+  ;;
+*)
+  ;;
+esac
