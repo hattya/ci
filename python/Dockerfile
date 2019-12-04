@@ -18,6 +18,7 @@ RUN apt update \
         python3.6-dev python3.6-venv \
         python3.7-dev python3.7-venv \
         python3.8-dev python3.8-venv \
+        python3-distutils \
  && apt purge -y --auto-remove software-properties-common \
  && apt clean \
  && rm -rf /var/lib/apt/lists/*
