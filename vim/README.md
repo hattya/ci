@@ -2,6 +2,8 @@
 
 A Docker image for CI with Vim.
 
+[![Docker Hub](https://img.shields.io/docker/cloud/build/hattya/vim)](https://hub.docker.com/r/hattya/vim)
+
 
 ## Installation
 
@@ -59,4 +61,4 @@ There is `v` command to switch Vim versions.
 - `VIM74`:  A version of Vim 7.4.
 - `VIM80`:  A version of Vim 8.0.
 - `VIM81`:  A version of Vim 8.1.
-- `LATEST`: A version of Vim latest.
+- `LATEST`: The latest version of Vim.
