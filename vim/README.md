@@ -37,7 +37,7 @@ There is `v` command to switch Vim versions.
 - Vim latest
   ```console
   $ v latest
-  Vim 8.1.2372
+  Vim 8.2
   ```
 
 
