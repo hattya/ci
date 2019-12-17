@@ -17,7 +17,7 @@ setup() {
 }
 
 case "${1}" in
-7.4|8.[01])
+7.4|8.[0-2])
   setup $(basename $(ls -d ${VIMDIR}/${1}.* | sort | head -n 1))
   ;;
 latest)

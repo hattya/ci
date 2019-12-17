@@ -34,17 +34,23 @@ There is `v` command to switch Vim versions.
   Vim 8.1.1
   ```
 
+- Vim 8.2
+  ```console
+  $ v 8.2
+  Vim 8.2
+  ```
+
 - Vim latest
   ```console
   $ v latest
-  Vim 8.2
+  Vim 8.2.14
   ```
 
 
 ## Platform
 
 - Alpine Linux 3.10
-- Vim 7.4 - 8.1, latest
+- Vim 7.4 - 8.2, latest
   - themis.vim
 - Python 3.8
   - covimerage
@@ -61,4 +67,5 @@ There is `v` command to switch Vim versions.
 - `VIM74`:  A version of Vim 7.4.
 - `VIM80`:  A version of Vim 8.0.
 - `VIM81`:  A version of Vim 8.1.
+- `VIM82`:  A version of Vim 8.2.
 - `LATEST`: The latest version of Vim.
