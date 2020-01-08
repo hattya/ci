@@ -49,7 +49,7 @@ There is `v` command to switch Vim versions.
 
 ## Platform
 
-- Alpine Linux 3.10
+- Alpine Linux 3.11
 - Vim 7.4 - 8.2, latest
   - themis.vim
 - Python 3.8
