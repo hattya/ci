@@ -10,7 +10,7 @@ setup() {
     [ -L ${sym} ] && realpath ${sym} | grep "^${VIMDIR}" >/dev/null && rm ${sym} || true
   done
 
-  printf "\e[32;1mVim\e[0m %s\n" $(echo ${1} | sed -e 's/\.00\+/./' -e 's/\.0*$//')
+  printf "\e[32;1mVim\e[0m %s\n" $(echo ${1} | sed -e 's/\.0*\([0-9]*\)$/.\1/' -e 's/\.$//')
   for x in ${VIMDIR}/${1}/bin/*; do
     ln -s ${x} ${BINDIR}/$(basename ${x})
   done
