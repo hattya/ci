@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+GODIR="/usr/local/go"
+
+case "${1}" in
+-1.[0-9]*)
+  GO=${1##-}
+  shift
+  ;;
+*)
+  : ${GO:=$(basename $(ls -d ${GODIR}/* | sort -t . -k 2n | tail -n 1))}
+  ;;
+esac
+
+GOROOT=${GODIR}/${GO}
+
+if [ ! -d ${GOROOT} ]; then
+  echo "go${GO} is not available!" >&2
+  exit 1
+fi
+
+exec ${GOROOT}/bin/go "${@}"
