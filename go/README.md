@@ -12,20 +12,23 @@ $ docker pull hattya/go
 
 ## Usage
 
-You can use a command-line flag or an environment variable to switch versions
-of Go. A command-line flag takes precedence, and the latest version is used by
-default.
+There is `g` command to switch versions of Go.
 
-- Command-Line Flag
+- Go 1.12
   ```console
-  $ go -1.14 version
-  go version go1.14.2 linux/amd64
+  $ g 1.12
+  go version go1.12.17 linux/amd64
   ```
 
-- Environment Variable
+- Go 1.13
   ```console
-  $ export GO=1.14
-  $ go version
+  $ g 1.13
+  go version go1.13.10 linux/amd64
+  ```
+
+- Go 1.14
+  ```console
+  $ g 1.14
   go version go1.14.2 linux/amd64
   ```
 

@@ -21,10 +21,11 @@ RUN apt update \
  && apt purge -y --auto-remove curl jq \
  && apt clean \
  && rm -rf /var/lib/apt/lists/*
-COPY go /usr/local/bin
+COPY g /usr/local/bin
 
 ENV GOPATH="/go"
 ENV PATH="${GOPATH}/bin:${PATH}"
 
 RUN mkdir -p ${GOPATH} \
- && chmod 777 ${GOPATH}
+ && chmod 777 ${GOPATH} \
+ && g latest

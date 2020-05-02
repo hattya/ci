@@ -1,0 +1,32 @@
+#!/bin/sh
+
+set -e
+
+BINDIR="/usr/local/bin"
+GODIR="/usr/local/go"
+
+list() {
+  for v in ${GODIR}/*; do
+    [ -d ${v} ] && basename ${v}
+  done | sort -n -t . -k 1,1 -k 2,2
+}
+
+setup() {
+  for l in ${BINDIR}/*; do
+    [ -L ${l} ] && realpath ${l} | grep "^${GODIR}" >/dev/null && rm ${l}
+  done
+
+  for x in ${GODIR}/${1}/bin/*; do
+    ln -s ${x} ${BINDIR}/$(basename ${x})
+  done
+  go version
+}
+
+case "${1}" in
+1.1[2-4])
+  setup ${1}
+  ;;
+latest)
+  setup $(list | tail -n 1)
+  ;;
+esac
