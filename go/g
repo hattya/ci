@@ -6,9 +6,9 @@ BINDIR="/usr/local/bin"
 GODIR="/usr/local/go"
 
 list() {
-  for v in ${GODIR}/*; do
+  for v in ${GODIR}/${1:-*}.*; do
     [ -d ${v} ] && basename ${v}
-  done | sort -n -t . -k 1,1 -k 2,2
+  done | sort -n -t . -k 1,1 -k 2,2 -k 3,3
 }
 
 setup() {
@@ -24,9 +24,9 @@ setup() {
 
 case "${1}" in
 1.1[2-4])
-  setup ${1}
+  setup $(list ${1} | head -n 1)
   ;;
 latest)
-  setup $(list | tail -n 1)
+  setup $(list      | tail -n 1)
   ;;
 esac

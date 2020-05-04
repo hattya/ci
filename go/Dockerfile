@@ -10,15 +10,13 @@ RUN apt update \
         gcc libc6-dev \
         git mercurial \
         ca-certificates \
-	curl jq \
- && for v in 1.12 1.13 1.14; do \
+	curl \
+ && for v in 1.12.17 1.13.10 1.14.2; do \
         mkdir -p /usr/local/go/${v} \
-     && curl -sS "https://golang.org/dl/?mode=json&include=all" \
-      | jq -r --arg v ${v} '[.[] | select((.version | startswith("go" + $v)) and .stable)][0] | .files[] | select(.os == "linux" and .arch == "amd64") | "https://golang.org/dl/" + .filename' \
-      | xargs curl -sSL \
+     && curl -sSL "https://golang.org/dl/go${v}.linux-amd64.tar.gz" \
       | tar -zxC /usr/local/go/${v} --strip-components 1 \
   ; done \
- && apt purge -y --auto-remove curl jq \
+ && apt purge -y --auto-remove curl \
  && apt clean \
  && rm -rf /var/lib/apt/lists/*
 COPY g /usr/local/bin
