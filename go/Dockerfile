@@ -13,7 +13,7 @@ RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/so
         npm \
         ca-certificates \
         curl \
- && for v in 1.12.17 1.13.11 1.14.2; do \
+ && for v in 1.12.17 1.13.11 1.14.3; do \
         mkdir -p /usr/local/go/${v} \
      && curl -sSL "https://golang.org/dl/go${v}.linux-amd64.tar.gz" \
       | tar -zxC /usr/local/go/${v} --strip-components 1 \
