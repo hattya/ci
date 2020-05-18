@@ -29,3 +29,6 @@ ENV PATH="${GOPATH}/bin:${PATH}"
 RUN mkdir -p ${GOPATH} \
  && chmod 777 ${GOPATH} \
  && g latest
+
+# workaround for https://bugs.debian.org/960283
+RUN sed -i "/pathArray/s/ay//" /usr/lib/nodejs/dot-prop/index.js
