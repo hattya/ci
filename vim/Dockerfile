@@ -29,7 +29,7 @@ RUN apk add --no-cache \
  && apk del --purge .build
 COPY v /usr/local/bin
 
-ARG LATEST="v8.2.1219"
+ARG LATEST="v8.2.1307"
 
 RUN apk add --no-cache --virtual .build \
         gcc make \
