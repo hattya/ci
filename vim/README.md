@@ -49,12 +49,12 @@ There is `v` command to switch Vim versions.
 
 ## Platform
 
-- Alpine Linux 3.11
+- Debian 10 (buster)
 - Vim 7.4 - 8.2, latest
   - themis.vim
-- Python 3.8
+- Python 3.7
   - covimerage
-- Bazaar
+- Breezy
 - CVS
 - Fossil
 - Git
