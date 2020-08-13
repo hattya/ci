@@ -14,7 +14,7 @@ $ docker pull hattya/python
 
 ## Platform
 
-- Ubuntu 18.04
+- Ubuntu 20.04
 - Python 2.7, 3.5 - 3.8
   - coverage
   - tox
@@ -23,7 +23,7 @@ $ docker pull hattya/python
   - C
   - C++
   - LCOV
-- Bazaar
+- Breezy
 - Fossil
 - Git
 - Mercurial

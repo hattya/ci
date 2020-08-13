@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 LABEL maintainer="Akinori Hattori <hattya@gmail.com>"
 
@@ -8,7 +8,7 @@ ENV LANG="C.UTF-8"
 RUN apt update \
  && apt install -y --no-install-recommends \
         g++ gcc lcov \
-        bzr fossil git mercurial subversion \
+        brz fossil git mercurial subversion \
         software-properties-common \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
@@ -25,3 +25,6 @@ RUN pip3 install -U \
          coverage \
          tox tox-venv \
  && rm -rf /root/.cache
+
+# workaround for Python 3.6
+RUN sed -i "s/-specs=.*\.specs *//" /usr/lib/python3.6/_sysconfigdata*.py
