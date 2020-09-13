@@ -23,7 +23,7 @@ setup() {
 }
 
 case "${1}" in
-1.1[2-4])
+1.1[2-5])
   setup $(list ${1} | head -n 1)
   ;;
 latest)
