@@ -29,6 +29,3 @@ RUN pip3 install -U \
 
 # workaround for Python 3.6
 RUN sed -i "s/-specs=.*\.specs *//" /usr/lib/python3.6/_sysconfigdata*.py
-# workaround for Python 3.9
-RUN ln -sf /usr/lib/python3.9/_sysconfigdata__linux_x86_64-linux-gnu.py \
-           /usr/lib/python3.9/_sysconfigdata__x86_64-linux-gnu.py
