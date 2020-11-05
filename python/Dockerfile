@@ -13,7 +13,6 @@ RUN apt update \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
         python2.7-dev \
-        python3.5-dev python3.5-venv \
         python3.6-dev python3.6-venv \
         python3.7-dev python3.7-venv \
         python3.8-dev python3.8-venv \
