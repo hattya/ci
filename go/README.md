@@ -2,6 +2,8 @@
 
 A Docker image for CI with Go.
 
+[![Docker Hub](https://img.shields.io/docker/cloud/build/hattya/go)](https://hub.docker.com/r/hattya/go)
+
 
 ## Installation
 
