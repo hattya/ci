@@ -10,15 +10,17 @@ RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/so
  && apt install -yt buster-backports --no-install-recommends \
         gcc libc6-dev \
         git mercurial \
-        npm \
         ca-certificates \
         curl \
+ && apt install -y --no-install-recommends \
+        npm \
  && for v in 1.12.17 1.13.15 1.14.13 1.15.6; do \
         mkdir -p /usr/local/go/${v} \
      && curl -sSL "https://golang.org/dl/go${v}.linux-amd64.tar.gz" \
       | tar -zxC /usr/local/go/${v} --strip-components 1 \
   ; done \
- && apt purge -y --auto-remove curl \
+ && apt purge -y --auto-remove \
+        curl \
  && apt clean \
  && rm -rf /var/lib/apt/lists/*
 COPY g /usr/local/bin
