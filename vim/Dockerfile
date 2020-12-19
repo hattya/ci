@@ -37,7 +37,7 @@ RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/so
  && rm -rf /var/lib/apt/lists/*
 COPY v /usr/local/bin
 
-ARG LATEST="v8.2.2100"
+ARG LATEST="v8.2.2141"
 
 RUN apt update \
  && apt install -yt buster-backports --no-install-recommends \
