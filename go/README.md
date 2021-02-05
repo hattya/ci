@@ -25,7 +25,7 @@ There is `g` command to switch versions of Go.
 - Go 1.14
   ```console
   $ g 1.14
-  go version go1.14.14 linux/amd64
+  go version go1.14.15 linux/amd64
   ```
 
 - Go 1.15

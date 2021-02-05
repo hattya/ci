@@ -14,7 +14,7 @@ RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/so
         curl \
  && apt install -y --no-install-recommends \
         npm \
- && for v in 1.13.15 1.14.14 1.15.7; do \
+ && for v in 1.13.15 1.14.15 1.15.7; do \
         mkdir -p /usr/local/go/${v} \
      && curl -sSL "https://golang.org/dl/go${v}.linux-amd64.tar.gz" \
       | tar -zxC /usr/local/go/${v} --strip-components 1 \
