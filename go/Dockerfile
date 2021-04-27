@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND="noninteractive"
 ENV LANG="C.UTF-8"
 
 RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list \
+ && printf "Package: libcurl3-gnutls\nPin: release o=Debian, a=stable\nPin-Priority: 1001\n" >> /etc/apt/preferences.d/curl \
  && apt update \
  && apt install -yt buster-backports --no-install-recommends \
         gcc libc6-dev \
