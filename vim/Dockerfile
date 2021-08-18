@@ -11,7 +11,7 @@ ARG VIM81="v8.1.0001"
 ARG VIM82="v8.2.0000"
 
 RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list.d/backports.list \
- && printf "Package: libcurl3-gnutls\nPin: release o=Debian, a=stable\nPin-Priority: 1001\n" >> /etc/apt/preferences.d/curl \
+ && printf "Package: libcurl3-gnutls\nPin: release o=Debian, n=buster\nPin-Priority: 1001\n" >> /etc/apt/preferences.d/curl \
  && apt update \
  && apt install -yt buster-backports --no-install-recommends \
         gcc make \
