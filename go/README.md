@@ -43,11 +43,11 @@ There is `g` command to switch versions of Go.
 
 ## Platform
 
-- Debian 10 (buster)
+- Debian 11 (bullseye)
 - Go 1.14 - 1.17
 - GCC
   - C
 - Git
 - Mercurial
-- Node.js 10
+- Node.js 12
   - npm
