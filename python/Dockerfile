@@ -18,13 +18,14 @@ RUN apt update \
         python3.8-dev python3.8-venv \
         python3.9-dev python3.9-venv \
         python3-pip python3-setuptools python3-wheel \
+        python-dev-is-python3 \
  && apt purge -y --auto-remove \
         software-properties-common \
  && apt clean \
  && rm -rf /var/lib/apt/lists/*
-RUN pip3 install -U \
-         coverage \
-         tox tox-venv \
+RUN pip install -U \
+        coverage \
+        tox tox-venv \
  && rm -rf /root/.cache
 
 # workaround for Python 3.6
