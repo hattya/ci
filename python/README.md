@@ -15,7 +15,7 @@ $ docker pull hattya/python
 ## Platform
 
 - Ubuntu 20.04
-- Python 2.7, 3.6 - 3.9
+- Python 3.6 - 3.9
   - coverage
   - tox
   - tox-venv
