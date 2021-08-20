@@ -49,10 +49,10 @@ There is `v` command to switch Vim versions.
 
 ## Platform
 
-- Debian 10 (buster)
+- Debian 11 (bullseye)
 - Vim 7.4 - 8.2, latest
   - themis.vim
-- Python 3.7
+- Python 3.9
   - covimerage
 - Breezy
 - CVS
