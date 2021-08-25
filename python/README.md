@@ -18,7 +18,6 @@ $ docker pull hattya/python
 - Python 3.6 - 3.9
   - coverage
   - tox
-  - tox-venv
 - GCC
   - C
   - C++

@@ -24,7 +24,7 @@ RUN apt update \
  && rm -rf /var/lib/apt/lists/*
 RUN pip install -U \
         coverage \
-        tox tox-venv \
+        tox \
  && rm -rf /root/.cache
 
 # workaround for Python 3.6
