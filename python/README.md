@@ -15,7 +15,7 @@ $ docker pull hattya/python
 ## Platform
 
 - Ubuntu 20.04
-- Python 3.6 - 3.9
+- Python 3.6 - 3.10
   - coverage
   - tox
 - GCC

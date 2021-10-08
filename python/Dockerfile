@@ -12,10 +12,11 @@ RUN apt update \
         software-properties-common \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
-        python3.6-dev python3.6-venv \
-        python3.7-dev python3.7-venv \
-        python3.8-dev python3.8-venv \
-        python3.9-dev python3.9-venv \
+        python3.6-dev  python3.6-venv \
+        python3.7-dev  python3.7-venv \
+        python3.8-dev  python3.8-venv \
+        python3.9-dev  python3.9-venv \
+        python3.10-dev python3.10-venv \
         python3-pip python3-setuptools python3-wheel \
         python-dev-is-python3 \
  && apt purge -y --auto-remove \
