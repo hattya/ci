@@ -12,7 +12,7 @@ RUN apt update \
         npm \
         ca-certificates \
         curl \
- && for v in 1.15.15 1.16.9 1.17.2; do \
+ && for v in 1.15.15 1.16.10 1.17.2; do \
         mkdir -p /usr/local/go/${v} \
      && curl -sSL "https://golang.org/dl/go${v}.linux-amd64.tar.gz" \
       | tar -zxC /usr/local/go/${v} --strip-components 1 \
