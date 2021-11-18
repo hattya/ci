@@ -61,5 +61,5 @@ RUN apt update \
 RUN git clone --depth 1 https://github.com/thinca/vim-themis /opt/themis \
  && rm -rf /opt/themis/.git \
  && ln -s ../../../opt/themis/bin/themis /usr/local/bin/themis \
- && pip install -U "click<8" covimerage \
+ && pip install -U covimerage \
  && rm -rf /root/.cache
