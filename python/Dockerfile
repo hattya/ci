@@ -8,7 +8,7 @@ ENV LANG="C.UTF-8"
 RUN apt update \
  && apt install -y --no-install-recommends \
         g++ gcc lcov \
-        brz fossil git mercurial subversion \
+        brz darcs fossil git mercurial subversion \
         software-properties-common \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \

@@ -23,6 +23,7 @@ $ docker pull hattya/python
   - C++
   - LCOV
 - Breezy
+- Darcs
 - Fossil
 - Git
 - Mercurial
