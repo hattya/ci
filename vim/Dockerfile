@@ -37,7 +37,7 @@ RUN apt update \
  && rm -rf /var/lib/apt/lists/*
 COPY v /usr/local/bin
 
-ARG LATEST="v8.2.4202"
+ARG LATEST="v8.2.4301"
 
 RUN apt update \
  && apt install -y --no-install-recommends \
