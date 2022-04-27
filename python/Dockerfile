@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 LABEL maintainer="Akinori Hattori <hattya@gmail.com>"
 
@@ -9,7 +9,7 @@ RUN apt update \
  && apt install -y --no-install-recommends \
         g++ gcc lcov \
         brz darcs fossil git mercurial subversion \
-        software-properties-common \
+        gpg-agent software-properties-common \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
         python3.7-dev  python3.7-venv \
@@ -19,7 +19,7 @@ RUN apt update \
         python3-pip python3-setuptools python3-wheel \
         python-dev-is-python3 \
  && apt purge -y --auto-remove \
-        software-properties-common \
+        gpg-agent software-properties-common \
  && apt clean \
  && rm -rf /var/lib/apt/lists/*
 RUN pip install -U \
