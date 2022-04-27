@@ -12,7 +12,6 @@ RUN apt update \
         software-properties-common \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
-        python3.6-dev  python3.6-venv \
         python3.7-dev  python3.7-venv \
         python3.8-dev  python3.8-venv \
         python3.9-dev  python3.9-venv \
@@ -27,6 +26,3 @@ RUN pip install -U \
         coverage \
         tox \
  && rm -rf /root/.cache
-
-# workaround for Python 3.6
-RUN sed -i "s/-specs=.*\.specs *//" /usr/lib/python3.6/_sysconfigdata*.py
