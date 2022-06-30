@@ -19,11 +19,11 @@ setup() {
   for x in ${VIMDIR}/${1}/bin/*; do
     ln -s ${x} ${BINDIR}/$(basename ${x})
   done
-  printf "\e[32;1mVim\e[0m %s\n" $(echo ${1} | sed -E 's/\.0*([0-9]+)$/.\1/')
+  printf "\e[32;1mVim\e[0m %s\n" $(echo ${1} | sed -e 's/\.0*\([0-9]\+\)$/.\1/' -e 's/\.0$//')
 }
 
 case "${1}" in
-7.4|8.[0-2])
+7.4|8.[0-2]|9.0)
   setup $(list ${1} | head -n 1)
   ;;
 latest)
