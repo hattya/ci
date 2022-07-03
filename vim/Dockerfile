@@ -9,6 +9,7 @@ ARG VIM74="v7.4.280"
 ARG VIM80="v8.0.0002"
 ARG VIM81="v8.1.0001"
 ARG VIM82="v8.2.0000"
+ARG VIM90="v9.0.0000"
 
 RUN apt update \
  && apt install -y --no-install-recommends \
@@ -20,7 +21,7 @@ RUN apt update \
         python-is-python3 \
  && git clone -q https://github.com/vim/vim /tmp/vim \
  && cd /tmp/vim \
- && for v in ${VIM74} ${VIM80} ${VIM81} ${VIM82}; do \
+ && for v in ${VIM74} ${VIM80} ${VIM81} ${VIM82} ${VIM90}; do \
         git checkout -q ${v} \
      && ./configure \
             --prefix=/usr/local/vim/$(git describe --tags | cut -c2-) \
@@ -37,7 +38,7 @@ RUN apt update \
  && rm -rf /var/lib/apt/lists/*
 COPY v /usr/local/bin
 
-ARG LATEST="v9.0.0000"
+ARG LATEST="v9.0.0011"
 
 RUN apt update \
  && apt install -y --no-install-recommends \
