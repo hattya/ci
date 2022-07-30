@@ -49,7 +49,7 @@ There is `v` command to switch Vim versions.
 - Vim latest
   ```console
   $ v latest
-  Vim 9.0.11
+  Vim 9.0.100
   ```
 
 
