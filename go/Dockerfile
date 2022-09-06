@@ -9,7 +9,6 @@ RUN apt update \
  && apt install -y --no-install-recommends \
         gcc libc6-dev \
         git mercurial \
-        npm \
         ca-certificates \
         curl \
  && for v in 1.17.13 1.18.5 1.19; do \
@@ -17,8 +16,12 @@ RUN apt update \
      && curl -sSL "https://go.dev/dl/go${v}.linux-amd64.tar.gz" \
       | tar -zxC /usr/local/go/${v} --strip-components 1 \
   ; done \
+ && curl -sSL https://deb.nodesource.com/setup_lts.x | bash - \
+ && apt install -y --no-install-recommends \
+        nodejs \
  && apt purge -y --auto-remove \
         curl \
+        lsb-release gnupg \
  && apt clean \
  && rm -rf /var/lib/apt/lists/*
 COPY g /usr/local/bin
