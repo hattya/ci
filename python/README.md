@@ -15,7 +15,7 @@ $ docker pull hattya/python
 ## Platform
 
 - Ubuntu 22.04
-- Python 3.7 - 3.10
+- Python 3.7 - 3.11
   - coverage
   - tox
 - GCC
