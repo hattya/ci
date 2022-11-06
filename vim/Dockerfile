@@ -15,7 +15,7 @@ RUN apt update \
  && apt install -y --no-install-recommends \
         gcc make \
         libacl1-dev libncurses-dev\
-        brz cvs fossil git mercurial subversion \
+        brz cvs darcs fossil git mercurial subversion \
         ca-certificates \
         python3-pip python3-setuptools python3-wheel \
         python-is-python3 \

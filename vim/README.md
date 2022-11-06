@@ -62,6 +62,7 @@ There is `v` command to switch Vim versions.
   - covimerage
 - Breezy
 - CVS
+- Darcs
 - Fossil
 - Git
 - Mercurial
