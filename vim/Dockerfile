@@ -24,7 +24,7 @@ RUN apt update \
  && for v in ${VIM74} ${VIM80} ${VIM81} ${VIM82} ${VIM90}; do \
         git checkout -q ${v} \
      && ./configure \
-            --prefix=/usr/local/vim/$(git describe --tags | cut -c2-) \
+            --prefix=/usr/local/vim/$(git describe --tags | cut -c 2-) \
             --with-features=huge \
             --enable-fail-if-missing \
      && make install \
@@ -47,7 +47,7 @@ RUN apt update \
  && git -c advice.detachedHead=false clone -q -b ${LATEST} --depth 1 https://github.com/vim/vim /tmp/vim \
  && cd /tmp/vim \
  && ./configure \
-        --prefix=/usr/local/vim/$(git describe --tags | cut -c2-) \
+        --prefix=/usr/local/vim/$(git describe --tags | cut -c 2-) \
         --with-features=huge \
         --enable-fail-if-missing \
  && make install \
