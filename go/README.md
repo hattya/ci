@@ -34,11 +34,17 @@ There is `g` command to switch versions of Go.
   go version go1.19.5 linux/amd64
   ```
 
+- Go 1.20
+  ```console
+  $ g 1.20
+  go version go1.20 linux/amd64
+  ```
+
 
 ## Platform
 
 - Debian 11 (bullseye)
-- Go 1.17 - 1.19
+- Go 1.17 - 1.20
 - GCC
   - C
 - Git
