@@ -2,8 +2,6 @@
 
 A Docker image for CI with Vim.
 
-[![Docker Hub](https://img.shields.io/docker/cloud/build/hattya/vim)](https://hub.docker.com/r/hattya/vim)
-
 
 ## Installation
 
