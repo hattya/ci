@@ -2,8 +2,6 @@
 
 A Docker image for CI with Go.
 
-[![Docker Hub](https://img.shields.io/docker/cloud/build/hattya/go)](https://hub.docker.com/r/hattya/go)
-
 
 ## Installation
 
@@ -43,5 +41,5 @@ There is `g` command to switch versions of Go.
   - C
 - Git
 - Mercurial
-- Node.js 16
+- Node.js 18
   - npm
