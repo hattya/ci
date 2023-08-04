@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 LABEL maintainer="Akinori Hattori <hattya@gmail.com>"
 

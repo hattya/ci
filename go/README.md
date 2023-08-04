@@ -35,7 +35,7 @@ There is `g` command to switch versions of Go.
 
 ## Platform
 
-- Debian 11 (bullseye)
+- Debian 12 (bookworm)
 - Go 1.18 - 1.20
 - GCC
   - C
