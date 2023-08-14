@@ -32,11 +32,17 @@ There is `g` command to switch versions of Go.
   go version go1.20.7 linux/amd64
   ```
 
+- Go 1.21
+  ```console
+  $ g 1.21
+  go version go1.21.0 linux/amd64
+  ```
+
 
 ## Platform
 
 - Debian 12 (bookworm)
-- Go 1.18 - 1.20
+- Go 1.18 - 1.21
 - GCC
   - C
 - Git
