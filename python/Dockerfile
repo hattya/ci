@@ -16,6 +16,7 @@ RUN apt update \
         python3.9-dev  python3.9-venv \
         python3.10-dev python3.10-venv \
         python3.11-dev python3.11-venv \
+        python3.12-dev python3.12-venv \
         python3-pip python3-setuptools python3-wheel \
         python-dev-is-python3 \
  && apt purge -y --auto-remove \
