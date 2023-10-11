@@ -11,7 +11,7 @@ RUN apt update \
         git mercurial \
         ca-certificates \
         curl \
- && for v in 1.19.12 1.20.9 1.21.2; do \
+ && for v in 1.19.12 1.20.10 1.21.2; do \
         mkdir -p /usr/local/go/${v} \
      && curl -sSL https://go.dev/dl/go${v}.linux-amd64.tar.gz \
       | tar -zxC /usr/local/go/${v} --strip-components 1 \
