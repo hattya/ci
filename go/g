@@ -21,13 +21,13 @@ setup() {
   done
 
   for x in ${GODIR}/${1}/bin/*; do
-    ln -s ${x} ${BINDIR}/$(basename ${x})
+    [ -x ${x} ] && ln -s ${x} ${BINDIR}/$(basename ${x})
   done
   go version
 }
 
 case "${1}" in
-1.18|1.2[0-1])
+1.19|1.2[0-2])
   setup $(list ${1} | head -n 1)
   ;;
 latest)
