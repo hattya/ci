@@ -28,7 +28,7 @@ RUN apt update \
             --prefix=/usr/local/vim/$(git describe --tags | cut -c 2-) \
             --with-features=huge \
             --enable-fail-if-missing \
-     && make install \
+     && make -j $(nproc) install \
   ; done \
  && cd - >/dev/null \
  && rm -rf /tmp/vim \
@@ -51,7 +51,7 @@ RUN apt update \
         --prefix=/usr/local/vim/$(git describe --tags | cut -c 2-) \
         --with-features=huge \
         --enable-fail-if-missing \
- && make install \
+ && make -j $(nproc) install \
  && cd - >/dev/null \
  && rm -rf /tmp/vim \
  && apt purge -y --auto-remove \
