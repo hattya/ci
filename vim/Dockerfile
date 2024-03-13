@@ -17,8 +17,7 @@ RUN apt update \
         gcc make \
         libacl1-dev libncurses-dev\
         brz cvs darcs fossil git mercurial subversion \
-        ca-certificates \
-        python3-pip python3-setuptools python3-wheel \
+        python3-venv \
         python-is-python3 \
  && git clone -q https://github.com/vim/vim /tmp/vim \
  && cd /tmp/vim \
@@ -63,5 +62,8 @@ RUN apt update \
 RUN git clone --depth 1 https://github.com/thinca/vim-themis /opt/themis \
  && rm -rf /opt/themis/.git \
  && ln -s ../../../opt/themis/bin/themis /usr/local/bin/themis \
- && pip install -U --break-system-packages covimerage \
- && rm -rf /root/.cache
+ && python -m venv /opt/covimerage \
+ && /opt/covimerage/bin/python -m pip install -U pip setuptools wheel \
+ && /opt/covimerage/bin/python -m pip install -U covimerage \
+ && ln -s ../../../opt/covimerage/bin/coverage   /usr/local/bin/coverage \
+ && ln -s ../../../opt/covimerage/bin/covimerage /usr/local/bin/covimerage
