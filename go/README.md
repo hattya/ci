@@ -14,12 +14,6 @@ $ docker pull hattya/go
 
 There is `g` command to switch versions of Go.
 
-- Go 1.19
-  ```console
-  $ g 1.19
-  go version go1.19.12 linux/amd64
-  ```
-
 - Go 1.20
   ```console
   $ g 1.20
@@ -42,7 +36,7 @@ There is `g` command to switch versions of Go.
 ## Platform
 
 - Debian 12 (bookworm)
-- Go 1.19 - 1.22
+- Go 1.20 - 1.22
 - GCC
   - C
 - Git
