@@ -66,4 +66,8 @@ RUN git clone --depth 1 https://github.com/thinca/vim-themis /opt/themis \
  && /opt/covimerage/bin/python -m pip install -U pip setuptools wheel \
  && /opt/covimerage/bin/python -m pip install -U covimerage \
  && ln -s ../../../opt/covimerage/bin/coverage   /usr/local/bin/coverage \
- && ln -s ../../../opt/covimerage/bin/covimerage /usr/local/bin/covimerage
+ && ln -s ../../../opt/covimerage/bin/covimerage /usr/local/bin/covimerage \
+ && python -m venv /opt/primula \
+ && /opt/primula/bin/python -m pip install -U pip \
+ && /opt/primula/bin/python -m pip install -U primula \
+ && ln -s ../../../opt/primula/bin/primula /usr/local/bin/primula
