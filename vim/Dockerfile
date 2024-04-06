@@ -69,5 +69,5 @@ RUN git clone --depth 1 https://github.com/thinca/vim-themis /opt/themis \
  && ln -s ../../../opt/covimerage/bin/covimerage /usr/local/bin/covimerage \
  && python -m venv /opt/primula \
  && /opt/primula/bin/python -m pip install -U pip \
- && /opt/primula/bin/python -m pip install -U primula==0.3 \
+ && /opt/primula/bin/python -m pip install -U primula==0.4 \
  && ln -s ../../../opt/primula/bin/primula /usr/local/bin/primula
