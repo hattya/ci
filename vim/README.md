@@ -63,7 +63,6 @@ There is `v` command to switch Vim versions.
 - Vim 7.4 - 9.1, latest
   - themis.vim
 - Python 3.11
-  - covimerage
   - Primula
 - Breezy
 - CVS
