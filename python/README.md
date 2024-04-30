@@ -12,7 +12,7 @@ $ docker pull hattya/python
 
 ## Platform
 
-- Ubuntu 22.04
+- Ubuntu 24.04
 - Python 3.8 - 3.12
   - coverage
   - tox
