@@ -17,6 +17,7 @@ RUN apt update \
         python3.10-dev python3.10-venv \
         python3.11-dev python3.11-venv \
         python3.12-dev python3.12-venv \
+        python3.13-dev python3.13-venv \
         python3-pip python3-coverage tox \
         python-dev-is-python3 \
  && ln -s /usr/bin/python3-coverage /usr/local/bin/coverage \
