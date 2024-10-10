@@ -13,7 +13,6 @@ RUN apt update \
 	cabal-install zlib1g-dev \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
-        python3.8-dev  python3.8-venv \
         python3.9-dev  python3.9-venv \
         python3.10-dev python3.10-venv \
         python3.11-dev python3.11-venv \
