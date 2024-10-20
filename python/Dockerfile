@@ -10,7 +10,7 @@ RUN apt update \
         g++ gcc lcov \
         brz fossil git mercurial subversion \
         gpg-agent software-properties-common \
-	cabal-install zlib1g-dev \
+	cabal-install \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
         python3.9-dev  python3.9-venv \
@@ -27,6 +27,6 @@ RUN apt update \
  && rm -rf /root/.cabal \
  && apt purge -y --auto-remove \
         gpg-agent software-properties-common \
-	cabal-install zlib1g-dev \
+	cabal-install \
  && apt clean \
  && rm -rf /root/.launchpadlib /var/lib/apt/lists/*
