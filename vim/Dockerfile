@@ -64,5 +64,5 @@ RUN git clone --depth 1 https://github.com/thinca/vim-themis /opt/themis \
  && ln -s ../../../opt/themis/bin/themis /usr/local/bin/themis \
  && python -m venv /opt/primula \
  && /opt/primula/bin/python -m pip install -U pip \
- && /opt/primula/bin/python -m pip install -U primula==0.4 \
+ && /opt/primula/bin/python -m pip install -U primula==0.6 \
  && ln -s ../../../opt/primula/bin/primula /usr/local/bin/primula
