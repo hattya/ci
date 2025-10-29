@@ -13,7 +13,6 @@ RUN apt update \
 	cabal-install \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
-        python3.9-dev  python3.9-venv \
         python3.10-dev python3.10-venv \
         python3.11-dev python3.11-venv \
         python3.12-dev python3.12-venv \
