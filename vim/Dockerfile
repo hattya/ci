@@ -38,7 +38,7 @@ RUN apt update \
  && rm -rf /var/lib/apt/lists/*
 COPY v /usr/local/bin
 
-ARG LATEST="v9.1.1806"
+ARG LATEST="v9.1.1900"
 
 RUN apt update \
  && apt install -y --no-install-recommends \
