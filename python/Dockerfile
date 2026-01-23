@@ -22,7 +22,7 @@ RUN apt update \
         python-dev-is-python3 \
  && ln -s /usr/bin/python3-coverage /usr/local/bin/coverage \
  && cabal update \
- && cabal install --jobs --install-method copy --installdir /usr/local/bin darcs \
+ && cabal install --jobs --install-method copy --installdir /usr/local/bin --constraint "crypton-x509<1.8" darcs \
  && strip -p --strip-unneeded --remove-section .comment /usr/local/bin/darcs \
  && rm -rf /root/.cabal \
  && apt purge -y --auto-remove \
