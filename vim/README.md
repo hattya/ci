@@ -50,17 +50,23 @@ There is `v` command to switch Vim versions.
   Vim 9.1
   ```
 
+- Vim 9.2
+  ```console
+  $ v 9.2
+  Vim 9.2
+  ```
+
 - Vim latest
   ```console
   $ v latest
-  Vim 9.1.2101
+  Vim 9.2
   ```
 
 
 ## Platform
 
 - Debian 13 (trixie)
-- Vim 7.4 - 9.1, latest
+- Vim 7.4 - 9.2, latest
   - themis.vim
 - Python 3.13
   - Primula
