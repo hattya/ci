@@ -59,7 +59,7 @@ There is `v` command to switch Vim versions.
 - Vim latest
   ```console
   $ v latest
-  Vim 9.2
+  Vim 9.2.106
   ```
 
 
@@ -87,4 +87,5 @@ There is `v` command to switch Vim versions.
 - `VIM82`:  A version of Vim 8.2.
 - `VIM90`:  A version of Vim 9.0.
 - `VIM91`:  A version of Vim 9.1.
+- `VIM92`:  A version of Vim 9.2.
 - `LATEST`: The latest version of Vim.
