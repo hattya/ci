@@ -4,6 +4,7 @@ LABEL maintainer="Akinori Hattori <hattya@gmail.com>"
 
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV LANG="C.UTF-8"
+ENV VIRTUALENV_DOWNLOAD="1"
 
 RUN apt update \
  && apt install -y --no-install-recommends \
@@ -17,6 +18,7 @@ RUN apt update \
         python3.12-dev python3.12-venv \
         python3.13-dev python3.13-venv python3.13-nogil \
         python3.14-dev python3.14-venv \
+        python3.15-dev python3.15-venv python3.15-nogil \
         python3-pip python3-coverage tox \
         python-dev-is-python3 \
  && ln -s /usr/bin/python3-coverage /usr/local/bin/coverage \
