@@ -13,7 +13,6 @@ RUN apt update \
         gpg-agent software-properties-common \
  && apt-add-repository -y ppa:deadsnakes/ppa \
  && apt install -y --no-install-recommends \
-        python3.10-dev python3.10-venv \
         python3.11-dev python3.11-venv \
         python3.12-dev python3.12-venv \
         python3.13-dev python3.13-venv python3.13-nogil \
