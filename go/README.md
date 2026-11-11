@@ -41,5 +41,5 @@ There is `g` command to switch versions of Go.
   - C
 - Git
 - Mercurial
-- Node.js 24
+- Node.js 26
   - npm
